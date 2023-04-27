@@ -5,6 +5,6 @@ namespace App\Controllers;
 class FacultyController
 {
     public function index(){
-        return view('welcome');
+        return view('welcome_msg_1');
     }
 }
