@@ -1,0 +1,11 @@
+$color-danger : red;
+*{
+    $color-primary : red;  
+}
+.bg-red {
+    background-color : $color-danger;
+}
+
+.bg-primary {
+    background-color: blue;
+}

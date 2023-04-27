@@ -1,0 +1,48 @@
+@use 'bg-color';
+
+$color : green;
+
+@mixin addBorder($size, $color) {
+    border: $size+px solid $color
+}
+
+@mixin addFlex($direction, $gap){
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap+px;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    color: $color;
+
+    p {
+        font-style: italic;
+    }
+
+    .test {
+        @include addBorder(1, blue);
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.btn-primary {
+    @extend .bg-primary;
+    cursor: pointer;
+}
+
+.btn-danger {
+    @extend .bg-red;
+    border: none;
+    cursor: pointer;
+}
+
+.container1{
+    @include addFlex(row, 5);
+}
+
+.container2{
+    @include addFlex(column, 10);
+}
